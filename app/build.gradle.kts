@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.angel.loctracer"
+    namespace = "com.angel.loclog"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.angel.loctracer"
+        applicationId = "com.angel.loclog"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
