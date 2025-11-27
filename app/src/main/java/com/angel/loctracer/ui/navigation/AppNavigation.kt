@@ -1,0 +1,21 @@
+package com.angel.loctracer.ui.navigation
+
+import androidx.compose.runtime.Composable
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.angel.loctracer.ui.main.MainScreen
+import com.angel.loctracer.ui.saved.SavedLocationsScreen
+
+@Composable
+fun AppNavigation() {
+    val navController = rememberNavController()
+    NavHost(navController = navController, startDestination = "main") {
+        composable("main") {
+            MainScreen(navController = navController)
+        }
+        composable("saved") {
+            SavedLocationsScreen(onBack = { navController.popBackStack() })
+        }
+    }
+}
